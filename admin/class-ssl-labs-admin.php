@@ -133,8 +133,8 @@ class SSL_Labs_Admin {
 
         add_submenu_page(
             $this->plugin_name,
-            __( 'View status', $this->plugin_name ),
-            __( 'View status', $this->plugin_name ),
+            __( 'View Status', $this->plugin_name ),
+            __( 'View Status', $this->plugin_name ),
             'manage_options',
             $this->plugin_name . "-view-status",
             array( $this, 'display_status_page' )

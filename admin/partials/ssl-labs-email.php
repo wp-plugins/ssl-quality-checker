@@ -70,7 +70,7 @@
                         <!-- Start table to add spacing between the elements -->
                         <table width="100%">
                             <tr>
-                                <td><font face="Arial" color="#333333">The quality of your SSL configurations is not at your expected standard.  It is recommended to check the documentation at <a href="https://www.ssllabs.com/index.html"><font face="Arial" color="#333333">Qualys SSL Labs</font></a> to improve your rating.</font></td>
+                                <td><font face="Arial" color="#333333">The quality of your SSL configuration is not of at your expected standard.  It is recommended to check the documentation at <a href="https://www.ssllabs.com/index.html"><font face="Arial" color="#333333">Qualys SSL Labs</font></a> to improve your rating.</font></td>
                             </tr>
                             <tr>
                                 <td height="20"></td>
