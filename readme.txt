@@ -8,7 +8,7 @@ License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl.html
 Stable tag: 1.0.1
 
-Ensure you SSL certificate is valid and server is configured for best security practices.
+Ensure your SSL certificate is valid and your server is configured for best security practices.
 
 == Description ==
 
