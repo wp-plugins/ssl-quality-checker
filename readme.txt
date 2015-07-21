@@ -6,7 +6,7 @@ Requires at least: 4.2.2
 Tested up to: 4.2.2
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl.html
-Stable tag: trunk
+Stable tag: 1.0.1
 
 Ensure you SSL certificate is valid and server is configured for best security practices.
 
