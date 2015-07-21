@@ -178,7 +178,7 @@
                                 <td height="20"></td>
                             </tr>
                             <tr>
-                                <td><font face="Arial" color="#333333">Scan provided by <a href="https://www.ssllabs.com/index.html"><font face="Arial" color="#333333">Qualys</font></a> | Plugin by <a href="http://www.createful.com"><font face="Arial" color="#333333">Createful</font></a></font></td>
+                                <td><font face="Arial" color="#333333">Scan provided by <a href="https://www.ssllabs.com/index.html"><font face="Arial" color="#333333">Qualys SSL Labs</font></a> | Plugin by <a href="http://www.createful.com"><font face="Arial" color="#333333">Createful</font></a></font></td>
                             </tr>
                         </table><!-- end table to add spacing between the elements -->
                     </td>
