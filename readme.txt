@@ -1,7 +1,7 @@
 === SSL Quality Checker ===
 Contributors: createful
 Donate link: https://www.vreteful.com/
-Tags: SSL validator, Qualys SSL
+Tags: SSL validator, Qualys SSL, Security
 Requires at least: 4.2.2
 Tested up to: 4.2.2
 License: GPLv3
