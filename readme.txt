@@ -1,5 +1,5 @@
 === SSL Quality Checker ===
-Contributors: createful
+Contributors: Createful
 Donate link: https://www.vreteful.com/
 Tags: SSL validator, Qualys SSL, Security
 Requires at least: 4.2.2
