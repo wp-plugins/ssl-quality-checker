@@ -24,10 +24,13 @@ Notification emails can be sent to a specified email address when the grading of
 
 == Screenshots ==
 
+1. Settings for the plugin
+2. Test result page
+3. Email notification
 
 == Changelog ==
 
-1.0
+1.0.1
 Initial release
 
 == Upgrade Notice ==
