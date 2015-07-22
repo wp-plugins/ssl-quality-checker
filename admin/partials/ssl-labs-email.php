@@ -157,7 +157,7 @@
                                                 </table><!-- End grade -->
                                             </td>
                                             <td width="20"></td>
-                                            <td><font face="Arial" color="#333333">72.21.206.6</font></td>
+                                            <td><font face="Arial" color="#333333"><?php echo $endpoint->ipAddress ?></font></td>
                                             <td width="20"></td>
                                             <td><a href="https://www.ssllabs.com/ssltest/analyze.html?d=<?php echo str_replace("https://","",$site_url)?>&s=<?php echo $endpoint->ipAddress ?>"><font face="Arial" color="#333333">View detailed report on SSL Labs</font></a></td>
                                         </tr>

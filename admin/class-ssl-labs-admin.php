@@ -3,7 +3,7 @@
  * The dashboard-specific functionality of the plugin.
  *
  * @link       http://example.com
- * @since      1.0.0
+ * @since      1.0.2
  *
  * @package    SSL_Labs
  * @subpackage SSL_Labs/admin
@@ -202,14 +202,15 @@ class SSL_Labs_Admin {
                 $options = get_option( "ssl_quality_checker_settings");
                 if(!$client->check_grade($options['expected_grade'])){
                     update_option("ssl_labs_inform_user", 1);
+                    if ($options['email_address'] && $options['force_email_send']) {
+                        add_filter("wp_mail_content_type", array($this,"set_mail_content_type"));
+                        self::send_email($response,$options['email_address']);
+                        remove_filter("wp_mail_content_type", array($this,"set_mail_content_type"));
+                    }
                 }else{
                     update_option("ssl_labs_inform_user", 0);
                 }
-                if ($options['email_address'] && $options['force_email_send']) {
-                    add_filter("wp_mail_content_type", array($this,"set_mail_content_type"));
-                    self::send_email($response,$options['email_address']);
-                    remove_filter("wp_mail_content_type", array($this,"set_mail_content_type"));
-                }
+
             }
         }else{
             include_once( 'partials/' . $this->plugin_name . '-view-status-not-ssl.php');

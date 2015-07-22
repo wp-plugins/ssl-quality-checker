@@ -69,7 +69,7 @@ class SSL_Labs {
 	public function __construct() {
 
 		$this->plugin_name = 'ssl-labs';
-		$this->version = '1.0.0';
+		$this->version = '1.0.2';
 
 		$this->load_dependencies();
 		$this->set_locale();
@@ -262,7 +262,7 @@ class SSL_Labs {
 	}
 
     public function do_upgrade(){
-
+        SSL_Labs_Option::update_option('domain','');
         SSL_Labs_Option::update_option('version',$this->get_version());
     }
 
