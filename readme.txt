@@ -6,7 +6,7 @@ Requires at least: 4.2.2
 Tested up to: 4.2.2
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl.html
-Stable tag: 1.0.2
+Stable tag: 1.0.3
 
 Ensure your SSL certificate is valid and your server is configured for best security practices.
 
@@ -34,6 +34,8 @@ Notification emails can be sent to a specified email address when the grading of
 Initial release
 1.0.2
 Fix email force send to only end if the expected grade has not been reached
+1.0.3
+Fix menu titles
 
 == Upgrade Notice ==
 
