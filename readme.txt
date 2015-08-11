@@ -3,7 +3,7 @@ Contributors: Createful
 Donate link: https://www.createful.com/
 Tags: SSL validator, Qualys SSL, Security
 Requires at least: 4.2.2
-Tested up to: 4.2.2
+Tested up to: 4.3
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl.html
 Stable tag: 1.0.3
