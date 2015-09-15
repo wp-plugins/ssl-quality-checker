@@ -208,7 +208,11 @@ class SSL_Labs_Settings_Definition {
 //            )
 //
 //		);
-
+        $settings['default_tab']['email_site_admin'] = array(
+            'name' => __( 'Email Site Admin', self::$plugin_name ),
+            'desc' => __( 'Email report to the site administrator', self::$plugin_name ),
+            'type' => 'checkbox'
+        );
         $settings['default_tab']['email_address'] = array(
             'name' => __( 'Email Address', self::$plugin_name ),
             'desc' => __( 'Email address to send notifications. Leave blank to not send email notifications', self::$plugin_name ),

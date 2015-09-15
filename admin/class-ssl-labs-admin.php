@@ -178,12 +178,14 @@ class SSL_Labs_Admin {
 	}
 
     public function get_url(){
+
         $options = get_option( "ssl_quality_checker_settings");
         if($options['domain']){
             return $options['domain'];
         }else {
             return get_site_url();
         }
+
     }
     public function display_status_page(){
 
@@ -202,10 +204,24 @@ class SSL_Labs_Admin {
                 $options = get_option( "ssl_quality_checker_settings");
                 if(!$client->check_grade($options['expected_grade'])){
                     update_option("ssl_labs_inform_user", 1);
-                    if ($options['email_address'] && $options['force_email_send']) {
-                        add_filter("wp_mail_content_type", array($this,"set_mail_content_type"));
+                    if($options['email_site_admin']){
+                        $adminusers = get_users('role=Administrator');
+                        foreach ($adminusers as $user) {
+                            self::send_email($response,$user->user_email);
+                        }
+                    }
+                    if ($options['email_address']) {
                         self::send_email($response,$options['email_address']);
-                        remove_filter("wp_mail_content_type", array($this,"set_mail_content_type"));
+                    }
+                }else if($options['force_email_send']) {
+                    if($options['email_site_admin']){
+                        $adminusers = get_users('role=Administrator');
+                        foreach ($adminusers as $user) {
+                            self::send_email($response, $user->user_email);
+                        }
+                    }
+                    if ($options['email_address']) {
+                        self::send_email($response,$options['email_address']);
                     }
                 }else{
                     update_option("ssl_labs_inform_user", 0);
@@ -230,9 +246,7 @@ class SSL_Labs_Admin {
                 if(!$client->check_grade($options['expected_grade'])){
                     update_option("ssl_labs_inform_user", 1);
                     if ($options['email_address']) {
-                        add_filter("wp_mail_content_type", array($this,"set_mail_content_type"));
                         self::send_email($response,$options['email_address']);
-                        remove_filter("wp_mail_content_type", array($this,"set_mail_content_type"));
                     }
                 }else{
                     update_option("ssl_labs_inform_user", 0);
@@ -249,7 +263,9 @@ class SSL_Labs_Admin {
         include_once( 'partials/' . $this->plugin_name . '-email.php');
         $message = ob_get_contents();
         ob_end_clean();
+        add_filter("wp_mail_content_type", array($this,"set_mail_content_type"));
         wp_mail($email_address, "Your SSL status", $message);
+        remove_filter("wp_mail_content_type", array($this,"set_mail_content_type"));
     }
 
     public function set_mail_content_type(){

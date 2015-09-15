@@ -6,7 +6,7 @@ Requires at least: 4.2.2
 Tested up to: 4.3
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl.html
-Stable tag: 1.0.3
+Stable tag: 1.0.5
 
 Ensure your SSL certificate is valid and your server is configured for best security practices.
 
@@ -36,6 +36,10 @@ Initial release
 Fix email force send to only end if the expected grade has not been reached
 1.0.3
 Fix menu titles
+1.0.4
+Added option to email site administrators
+1.0.5
+Remove useless empty public files for css / js
 
 == Upgrade Notice ==
 

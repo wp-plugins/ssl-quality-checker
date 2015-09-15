@@ -73,7 +73,6 @@ class SSL_Labs_Public {
 		 * class.
 		 */
 
-		wp_enqueue_style( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'css/ssl-labs-public.css', array(), $this->version, 'all' );
 
 	}
 
@@ -95,8 +94,6 @@ class SSL_Labs_Public {
 		 * between the defined hooks and the functions defined in this
 		 * class.
 		 */
-
-		wp_enqueue_script( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'js/ssl-labs-public.js', array( 'jquery' ), $this->version, false );
 
 	}
 
