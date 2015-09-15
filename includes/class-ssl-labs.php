@@ -69,7 +69,7 @@ class SSL_Labs {
 	public function __construct() {
 
 		$this->plugin_name = 'ssl-labs';
-		$this->version = '1.0.4';
+		$this->version = '1.0.5';
 
 		$this->load_dependencies();
 		$this->set_locale();

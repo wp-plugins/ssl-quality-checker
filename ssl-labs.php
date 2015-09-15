@@ -16,7 +16,7 @@
  * Plugin Name:       SSL Quality Checker
  * Plugin URI:        https://www.createful.com
  * Description:       Ensure your server meets the correct SSL quality
- * Version:           1.0.3
+ * Version:           1.0.5
  * Author:            Createful
  * Author URI:        https://www.createful.com
  * License:           GPL-2.0+
